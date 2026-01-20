@@ -5,12 +5,29 @@ const obj1 = {
   five: 20,
 };
 
+const btn1 = document.querySelector(".b-1");
+const out1 = document.querySelector(".out-1");
+
+btn1.onclick = fn1;
+
+function fn1() {
+  out1.innerHTML = obj1.two;
+}
 // Task 2
 const obj2 = {
   one: "hello",
   two: "mahai",
   five: "hi",
 };
+
+const btn2 = document.querySelector(".b-2");
+const out2 = document.querySelector(".out-2");
+
+btn2.onclick = fn2;
+
+function fn2() {
+  out2.innerHTML = obj2["five"];
+}
 
 // Task 3
 const obj3 = {
@@ -22,6 +39,16 @@ const obj3 = {
   mix: "mix",
 };
 
+const btn3 = document.querySelector(".b-3");
+const out3 = document.querySelector(".out-3");
+
+btn3.onclick = fn3;
+
+function fn3() {
+  for (const key in obj3) {
+    obj3[key] === "hi" ? (out3.innerHTML += obj3[key] + " ") : out3.innerHTML;
+  }
+}
 // Task 4
 const obj4 = {
   one: "hello",
@@ -32,17 +59,64 @@ const obj4 = {
   mix: "mix",
 };
 
+const btn4 = document.querySelector(".b-4");
+const out4 = document.querySelector(".out-4");
+
+btn4.onclick = fn4;
+
+function fn4() {
+  let counter = 0;
+  let str = "";
+  for (const key in obj4) {
+    // setTimeout(() => {
+    str += `${key} ${obj3[key]} <br />`;
+    // }, counter * 1000);
+    // counter++;
+  }
+  obj4.innerHTML = str;
+}
 // Task 5
 const obj5 = {
   one: 1,
   two: 2,
 };
 
+const btn5 = document.querySelector(".b-5");
+const out5 = document.querySelector(".out-5");
+
+btn5.onclick = function () {
+  fn5(obj5, out5);
+};
+
+function fn5(object, selector) {
+  let res = "";
+  for (const key in object) {
+    const value = object[key];
+    res += `${key} : ${value} <br>`;
+
+    // str += `${key} ${obj[key]} <br />`;
+  }
+  selector.innerHTML = res;
+}
 // Task 6
 const obj6 = {
   b: 17,
   e: 22,
 };
+
+const input61 = document.querySelector(".i-61");
+const input62 = document.querySelector(".i-62");
+const btn6 = document.querySelector(".b-6");
+const out6 = document.querySelector(".out-6");
+
+btn6.onclick = fn6;
+
+function fn6() {
+  const key = input61.value;
+  const value = input62.value;
+  obj6[key] = value;
+  fn5(obj6, out6);
+}
 
 // Task 7
 const obj7 = {
