@@ -197,3 +197,7 @@ class CoffeeMachine {
 const philips = new CoffeeMachine(philipsConfig);
 
 console.log("🚀 ~ philips:", philips);
+
+const btnType = "reset";
+
+const resetBtnEl = document.querySelector(`button[type='${btnType}']`);
