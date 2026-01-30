@@ -201,3 +201,19 @@ console.log("🚀 ~ philips:", philips);
 const btnType = "reset";
 
 const resetBtnEl = document.querySelector(`button[type='${btnType}']`);
+
+//
+
+const el = {
+  form: document.querySelector(".js-form"),
+  container: document.querySelector(".js-list"),
+};
+function init(cars = []) {
+  const markup = cars.map(carInfo => {
+    return `<li id="${carInfo.id}">
+    <img class ="" src=${carInfo.img} alt="${carInfo.type}>
+    `;
+  });
+}
+
+//
