@@ -75,3 +75,9 @@ function init() {
   }
   ulEl.innerHTML = store.tasks.map(createTaskMarkup).join("");
 }
+
+function handleCheckBox(event) {
+  if (event.target.nodeName !== "INPUT") {
+    return;
+  }
+}
